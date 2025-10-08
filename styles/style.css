@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazir', Tahoma, sans-serif;
+    background: #f5f6fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* هدر */
+.site-header {
+    background: linear-gradient(90deg, #3C467B, #50589C, #636CCB, #6E8CFB);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-header .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.main-nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.main-nav a:hover {
+    text-decoration: none;
+}
+
+/* محتوای اصلی */
+.site-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* فوتر */
+/* .site-footer {
+    background: #3C467B;
+    color: rgb(216, 1, 1);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    position: fixed;
+} */
+
+/* جدول */
+.cart-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+.cart-table th, .cart-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.cart-table th {
+    background: #50589C;
+    color: white;
+}
+
+/* دکمه‌ها */
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 3px;
+    background: #636CCB;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #6E8CFB;
+}
+.btn.success {
+    background: #28a745;
+}
+.btn.danger {
+    background: #dc3545;
+}
+.btn.small {
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+/* فرم‌ها */
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+.form label {
+    margin: 5px 0 3px;
+}
+.form input, .form textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* بالای پنل ادمین */
+.top-bar {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

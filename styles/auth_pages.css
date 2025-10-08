@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Vazir';
+    src: local('Vazir'), local('Vazir-Regular');
+}
+
+:root {
+    --primary-1: #50589C;
+    --primary-2: #6E8CFB;
+    --accent: #3C467B;
+    --bg: #f5f6fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Vazir, Tahoma, sans-serif;
+    background: var(--bg);
+    direction: rtl;
+    background-color: #e0e3ee;
+}
+
+/* --- Header --- */
+header {
+    background: linear-gradient(90deg, #3C467B, #50589C, #636CCB, #6E8CFB);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    /* لوگو راست، دکمه چپ */
+    align-items: center;
+    direction: rtl;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header .logo img {
+    height: 55px;
+    border-radius: 8px;
+}
+
+header .title {
+    flex: 1;
+    text-align: center;
+}
+
+header .title h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* دکمه سمت چپ */
+header .otherLogin {
+    background: #ffffff;
+    color: #21307a;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 9px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+header .otherLogin:hover {
+    background: #f2f2f2;
+    transform: translateY(-1px);
+}
+
+/* --- Auth container --- */
+.container-center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 8px 28px rgba(12, 18, 40, 0.08);
+    text-align: right;
+}
+
+.auth-brand {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.auth-container h2 {
+    margin: 0 0 16px 0;
+    color: var(--accent);
+    font-size: 20px;
+    text-align: center;
+}
+
+.auth-container label {
+    display: block;
+    font-weight: 700;
+    margin: 12px 0 6px;
+    font-size: 14px;
+}
+
+.auth-container input[type="text"],
+.auth-container input[type="email"],
+.auth-container input[type="password"],
+.auth-container input[type="tel"],
+.auth-container input[type="number"],
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e3ee;
+    font-size: 14px;
+    outline: none;
+}
+
+.auth-container input:focus {
+    box-shadow: 0 0 0 3px rgba(110, 140, 251, 0.12);
+    border-color: var(--primary-2);
+}
+
+.auth-container button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(45deg, var(--primary-1), var(--primary-2));
+    color: #fff;
+    transition: transform 0.2s ease;
+}
+
+.auth-container button:hover {
+    transform: translateY(-1px);
+}
+
+.auth-container .error {
+    color: #b00020;
+    background: #fff5f6;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.auth-container .back-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #636CCB;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.auth-container .back-btn:hover {
+    background: #3C467B;
+}
+
+
+@media (max-width:420px) {
+    .auth-container {
+        padding: 18px;
+    }
+
+    header .title h1 {
+        font-size: 18px;
+    }
+
+    header .otherLogin {
+        padding: 7px 14px;
+        font-size: 14px;
+    }
+}
